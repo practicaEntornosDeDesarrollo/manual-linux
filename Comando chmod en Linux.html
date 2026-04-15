@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comando chmod en Linux</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #38bdf8;
+        }
+        code {
+            background-color: #1e293b;
+            padding: 5px;
+            border-radius: 5px;
+            display: block;
+            margin: 10px 0;
+            color: #facc15;
+        }
+        .box {
+            background-color: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #334155;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #1e293b;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Comando chmod en Linux</h1>
+
+<div class="box">
+    <h2>¿Qué es chmod?</h2>
+    <p>
+        El comando <strong>chmod</strong> sirve para cambiar los permisos de archivos y directorios,
+        controlando quién puede leer, escribir o ejecutar un archivo.
+    </p>
+</div>
+
+<div class="box">
+    <h2>¿Qué hace exactamente?</h2>
+    <p>Permite definir permisos para:</p>
+    <ul>
+        <li>👤 Usuario (u)</li>
+        <li>👥 Grupo (g)</li>
+        <li>🌍 Otros (o)</li>
+    </ul>
+    <p>Tipos de permisos:</p>
+    <ul>
+        <li>📖 r (leer)</li>
+        <li>✏️ w (escribir)</li>
+        <li>⚙️ x (ejecutar)</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Uso básico</h2>
+    <code>chmod [permisos] archivo</code>
+</div>
+
+<div class="box">
+    <h2>Método numérico</h2>
+    <p>Cada permiso tiene un valor:</p>
+    <ul>
+        <li>r = 4</li>
+        <li>w = 2</li>
+        <li>x = 1</li>
+    </ul>
+
+    <table>
+        <tr>
+            <th>Número</th>
+            <th>Permiso</th>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>rwx</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>rw-</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>r-x</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>r--</td>
+        </tr>
+    </table>
+
+    <code>chmod 755 archivo.sh</code>
+</div>
+
+<div class="box">
+    <h2>Ejemplos prácticos</h2>
+
+    <h3>Permisos solo para el dueño</h3>
+    <code>chmod 700 archivo.txt</code>
+
+    <h3>Solo lectura</h3>
+    <code>chmod 444 archivo.txt</code>
+
+    <h3>Hacer ejecutable</h3>
+    <code>chmod +x script.sh</code>
+
+    <h3>Quitar escritura</h3>
+    <code>chmod -w archivo.txt</code>
+
+    <h3>Permisos específicos</h3>
+    <code>chmod u+x archivo.sh</code>
+
+    <h3>Recursivo</h3>
+    <code>chmod -R 755 carpeta/</code>
+</div>
+
+<div class="box">
+    <h2>Método simbólico</h2>
+    <code>chmod u+rwx,g+rx,o+rx archivo</code>
+</div>
+
+<div class="box">
+    <h2>Importante</h2>
+    <ul>
+        <li>⚠️ Permisos incorrectos pueden causar problemas</li>
+        <li>⚠️ 777 da acceso total a todos (no recomendado)</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Resumen</h2>
+    <ul>
+        <li>🔐 Controla permisos</li>
+        <li>👤 u / 👥 g / 🌍 o</li>
+        <li>📖 r | ✏️ w | ⚙️ x</li>
+        <li>🔢 Método numérico</li>
+        <li>🔤 Método simbólico</li>
+    </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comando sort en Linux</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #38bdf8;
+        }
+        code {
+            background-color: #1e293b;
+            padding: 5px;
+            border-radius: 5px;
+            display: block;
+            margin: 10px 0;
+            color: #facc15;
+        }
+        .box {
+            background-color: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Comando sort en Linux</h1>
+
+<div class="box">
+    <h2>¿Qué es sort?</h2>
+    <p>
+        El comando <strong>sort</strong> sirve para ordenar líneas de texto,
+        ya sea de un archivo o de la salida de otro comando.
+    </p>
+</div>
+
+<div class="box">
+    <h2>¿Qué hace exactamente?</h2>
+    <p>
+        <strong>sort</strong> organiza líneas automáticamente:
+    </p>
+    <ul>
+        <li>🔤 Alfabéticamente (por defecto)</li>
+        <li>🔢 Numéricamente</li>
+        <li>📊 Por columnas o campos</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Uso básico</h2>
+    <code>sort archivo.txt</code>
+    <p>Muestra el contenido ordenado alfabéticamente.</p>
+</div>
+
+<div class="box">
+    <h2>Ejemplos prácticos</h2>
+
+    <h3>Orden alfabético</h3>
+    <code>sort nombres.txt</code>
+
+    <h3>Orden inverso</h3>
+    <code>sort -r nombres.txt</code>
+
+    <h3>Orden numérico</h3>
+    <code>sort -n numeros.txt</code>
+
+    <h3>Eliminar duplicados</h3>
+    <code>sort -u lista.txt</code>
+
+    <h3>Ordenar por columna</h3>
+    <code>sort -k 2 datos.txt</code>
+
+    <h3>Separador personalizado</h3>
+    <code>sort -t "," -k 2 datos.csv</code>
+
+    <h3>Guardar resultado</h3>
+    <code>sort archivo.txt &gt; ordenado.txt</code>
+</div>
+
+<div class="box">
+    <h2>Uso con otros comandos</h2>
+    <code>cat archivo.txt | sort</code>
+    <code>ps aux | sort -k 3</code>
+    <p>Permite ordenar resultados de otros comandos.</p>
+</div>
+
+<div class="box">
+    <h2>Resumen</h2>
+    <ul>
+        <li>🔤 Ordena texto</li>
+        <li>🔢 Soporta números (-n)</li>
+        <li>🔁 Orden inverso (-r)</li>
+        <li>🧹 Elimina duplicados (-u)</li>
+        <li>📊 Ordena por columnas (-k)</li>
+    </ul>
+</div>
+
+</body>
+</html>

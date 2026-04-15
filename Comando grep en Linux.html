@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comando grep en Linux</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #38bdf8;
+        }
+        code {
+            background-color: #1e293b;
+            padding: 5px;
+            border-radius: 5px;
+            display: block;
+            margin: 10px 0;
+            color: #facc15;
+        }
+        .box {
+            background-color: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Comando grep en Linux</h1>
+
+<div class="box">
+    <h2>¿Qué es grep?</h2>
+    <p>
+        El comando <strong>grep</strong> sirve para buscar texto dentro de archivos o salidas de otros comandos.
+        Su nombre viene de <em>Global Regular Expression Print</em>, ya que usa expresiones regulares para encontrar patrones.
+    </p>
+</div>
+
+<div class="box">
+    <h2>¿Qué hace exactamente?</h2>
+    <p>
+        <strong>grep</strong> lee línea por línea y muestra solo aquellas que coinciden con un patrón que tú indiques.
+    </p>
+</div>
+
+<div class="box">
+    <h2>Uso básico</h2>
+    <code>grep "texto" archivo.txt</code>
+    <p>Muestra todas las líneas que contienen "texto".</p>
+</div>
+
+<div class="box">
+    <h2>Ejemplos prácticos</h2>
+
+    <h3>Buscar una palabra</h3>
+    <code>grep "error" log.txt</code>
+
+    <h3>Ignorar mayúsculas/minúsculas</h3>
+    <code>grep -i "error" log.txt</code>
+
+    <h3>Mostrar número de línea</h3>
+    <code>grep -n "error" log.txt</code>
+
+    <h3>Buscar en varios archivos</h3>
+    <code>grep "main" *.c</code>
+
+    <h3>Buscar en carpetas</h3>
+    <code>grep -r "config" .</code>
+
+    <h3>Invertir búsqueda</h3>
+    <code>grep -v "error" log.txt</code>
+
+    <h3>Contar coincidencias</h3>
+    <code>grep -c "error" log.txt</code>
+</div>
+
+<div class="box">
+    <h2>Uso con otros comandos</h2>
+    <code>ps aux | grep firefox</code>
+    <p>Busca procesos relacionados con Firefox.</p>
+</div>
+
+<div class="box">
+    <h2>Resumen</h2>
+    <ul>
+        <li>🔍 Busca texto en archivos</li>
+        <li>🧩 Usa patrones (expresiones regulares)</li>
+        <li>⚡ Muy potente con otros comandos</li>
+        <li>📂 Funciona con múltiples archivos</li>
+    </ul>
+</div>
+
+</body>
+</html>

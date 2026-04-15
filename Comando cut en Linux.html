@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comando cut en Linux</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #38bdf8;
+        }
+        code {
+            background-color: #1e293b;
+            padding: 5px;
+            border-radius: 5px;
+            display: block;
+            margin: 10px 0;
+            color: #facc15;
+        }
+        .box {
+            background-color: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Comando cut en Linux</h1>
+
+<div class="box">
+    <h2>¿Qué es cut?</h2>
+    <p>
+        El comando <strong>cut</strong> sirve para extraer partes específicas de cada línea
+        de un archivo o texto. Es muy útil con datos estructurados como CSV o logs.
+    </p>
+</div>
+
+<div class="box">
+    <h2>¿Qué hace exactamente?</h2>
+    <p><strong>cut</strong> permite cortar texto según:</p>
+    <ul>
+        <li>📍 Posición de caracteres</li>
+        <li>📊 Columnas (campos)</li>
+        <li>🔤 Delimitadores (coma, espacio, etc.)</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Uso básico</h2>
+    <code>cut [opciones] archivo.txt</code>
+</div>
+
+<div class="box">
+    <h2>Ejemplos prácticos</h2>
+
+    <h3>Cortar por caracteres</h3>
+    <code>cut -c 1-5 archivo.txt</code>
+
+    <h3>Un carácter específico</h3>
+    <code>cut -c 3 archivo.txt</code>
+
+    <h3>Primera columna (CSV)</h3>
+    <code>cut -d "," -f 1 archivo.csv</code>
+
+    <h3>Varias columnas</h3>
+    <code>cut -d "," -f 1,3 archivo.csv</code>
+
+    <h3>Rango de columnas</h3>
+    <code>cut -d ":" -f 1-3 /etc/passwd</code>
+
+    <h3>Con otros comandos</h3>
+    <code>ps aux | cut -c 1-10</code>
+    <code>ls -l | cut -d " " -f 1</code>
+
+</div>
+
+<div class="box">
+    <h2>Importante</h2>
+    <ul>
+        <li><strong>-d</strong> → separador</li>
+        <li><strong>-f</strong> → campos (columnas)</li>
+        <li><strong>-c</strong> → caracteres</li>
+    </ul>
+</div>
+
+<div class="box">
+    <h2>Resumen</h2>
+    <ul>
+        <li>✂️ Extrae partes de texto</li>
+        <li>📊 Ideal para columnas</li>
+        <li>🔤 Funciona por posición o separador</li>
+        <li>⚡ Muy útil con tuberías</li>
+    </ul>
+</div>
+
+</body>
+</html>
