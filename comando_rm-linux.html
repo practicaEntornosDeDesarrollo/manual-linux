@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <style>
+      color: #2c3e50;
+    }
+    code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 5px;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .warning {
+      background: #ffe6e6;
+      border-left: 5px solid #e74c3c;
+      padding: 10px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1> Carlos Notario Gete</h1>
+    <h1>Comando <code>rm</code> en Linux</h1>
+
+    <p>El comando <code>rm</code> (remove) se utiliza para eliminar archivos y directorios en sistemas Linux.</p>
+
+    <div class="warning">
+      <strong>Atención:</strong> Los archivos eliminados con <code>rm</code> no se pueden recuperar fácilmente.
+    </div>
+
+    <h2>Sintaxis básica</h2>
+    <pre><code>rm [opciones] archivo</code></pre>
+
+    <h2>Ejemplos comunes</h2>
+
+    <h3>1. Eliminar un archivo</h3>
+    <pre><code>rm archivo.txt</code></pre>
+    <p>Elimina el archivo especificado.</p>
+
+    <h3>2. Eliminar múltiples archivos</h3>
+    <pre><code>rm archivo1.txt archivo2.txt</code></pre>
+
+    <h3>3. Eliminar un directorio vacío</h3>
+    <pre><code>rm -d carpeta</code></pre>
+
+    <h3>4. Eliminar directorios y su contenido</h3>
+    <pre><code>rm -r carpeta</code></pre>
+    <p>Elimina la carpeta y todo lo que contiene.</p>
+
+    <h3>5. Forzar eliminación sin preguntar</h3>
+    <pre><code>rm -f archivo.txt</code></pre>
+
+    <h3>6. Eliminación recursiva y forzada</h3>
+    <pre><code>rm -rf carpeta</code></pre>
+    <p>Muy potente y peligroso: elimina todo sin confirmación.</p>
+
+    <h2>Opciones más usadas</h2>
+    <ul>
+      <li><code>-r</code> o <code>-R</code>: elimina directorios recursivamente.</li>
+      <li><code>-f</code>: fuerza la eliminación sin pedir confirmación.</li>
+      <li><code>-i</code>: pide confirmación antes de borrar.</li>
+    </ul>
+
+    <h2>Consejos útiles</h2>
+    <ul>
+      <li>Usa <code>rm -i</code> para evitar borrar archivos por error.</li>
+      <li>Ten mucho cuidado con <code>rm -rf</code>, especialmente como administrador.</li>
+      <li>Comprueba siempre la ruta antes de ejecutar el comando.</li>
+    </ul>
+
+    <h2>Conclusión</h2>
+    <p>El comando <code>rm</code> es muy útil pero debe usarse con precaución, ya que elimina archivos de forma permanente.</p>
+  </div>
+</body>
+</html>
